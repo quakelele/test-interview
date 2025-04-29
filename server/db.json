@@ -1,0 +1,151 @@
+{
+  "expenses": [
+    {
+      "description": "Аптека Вита",
+      "category": "Другое",
+      "date": "2024-07-03",
+      "amount": 1200,
+      "id": "6169"
+    },
+    {
+      "description": "Кофейня №1",
+      "category": "Еда",
+      "date": "2024-07-02",
+      "amount": 400,
+      "id": "93cf"
+    },
+    {
+      "description": "Бильярд",
+      "category": "Развлечения",
+      "date": "2024-06-29",
+      "amount": 600,
+      "id": "6f4a"
+    },
+    {
+      "description": "Перекресток",
+      "category": "Еда",
+      "date": "2024-06-29",
+      "amount": 2360,
+      "id": "9ffa"
+    },
+    {
+      "description": "Летуль",
+      "category": "Другое",
+      "date": "2024-06-29",
+      "amount": 4300,
+      "id": "a2a2"
+    },
+    {
+      "description": "Яндекс Такси",
+      "category": "Транспорт",
+      "date": "2024-06-28",
+      "amount": 320,
+      "id": "228c"
+    },
+    {
+      "description": "Деливери",
+      "category": "Еда",
+      "date": "2024-06-28",
+      "amount": 2320,
+      "id": "d957"
+    },
+    {
+      "description": "Вкусвилл",
+      "category": "Еда",
+      "date": "2024-06-27",
+      "amount": 1220,
+      "id": "2a55"
+    },
+    {
+      "description": "Кофейня №1",
+      "category": "Еда",
+      "date": "2024-06-27",
+      "amount": 920,
+      "id": "70cc"
+    },
+    {
+      "description": "Вкусвилл",
+      "category": "Еда",
+      "date": "2024-06-26",
+      "amount": 840,
+      "id": "3518"
+    },
+    {
+      "id": "6457",
+      "description": "ЕДА Я",
+      "category": "Транспорт",
+      "date": "2025-04-03",
+      "amount": "3899"
+    },
+    {
+      "id": "5bcc",
+      "description": "DAdadada",
+      "category": "Образование",
+      "date": "2025-04-30",
+      "amount": "5900"
+    },
+    {
+      "id": "6c1f",
+      "description": "Купить гавна",
+      "category": "Транспорт",
+      "date": "2025-04-29",
+      "amount": "3000"
+    },
+    {
+      "id": "735a",
+      "description": "3131",
+      "category": "Еда",
+      "date": "2025-04-05",
+      "amount": "3131"
+    },
+    {
+      "id": "ad59",
+      "description": "555555",
+      "category": "Жильё",
+      "date": "2025-04-06",
+      "amount": "55121"
+    },
+    {
+      "id": "120e",
+      "description": "667",
+      "category": "Еда",
+      "date": "2025-04-05",
+      "amount": "123"
+    },
+    {
+      "id": "73d1",
+      "description": "6y",
+      "category": "Образование",
+      "date": "2025-04-25",
+      "amount": "454"
+    },
+    {
+      "id": "b525",
+      "description": "",
+      "category": "",
+      "date": "2025-04-03",
+      "amount": ""
+    },
+    {
+      "id": "dd2f",
+      "description": "ata",
+      "category": "Еда",
+      "date": "2025-05-15",
+      "amount": "4000"
+    },
+    {
+      "id": "d4f8",
+      "description": "4444",
+      "category": "Транспорт",
+      "date": "2025-04-23",
+      "amount": "31313"
+    },
+    {
+      "id": "b112",
+      "description": "",
+      "category": "",
+      "date": "",
+      "amount": "120000"
+    }
+  ]
+}

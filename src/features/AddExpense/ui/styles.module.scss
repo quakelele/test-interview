@@ -1,0 +1,111 @@
+.wrapper {
+   width: 379px;
+   border-radius: 30px;
+   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+   background: rgb(255, 255, 255);
+   padding: 32px;
+   display: flex;
+   gap: 24px;
+   flex-direction: column;
+   justify-content: space-between;
+
+   input {
+      border: 0.5px solid rgb(153, 153, 153);
+      border-radius: 6px;
+      height: 39px;
+      color: rgb(153, 153, 153);
+      padding: 12px;
+      box-sizing: border-box;
+   }
+   h3 {
+      color: rgb(0, 0, 0);
+      font-size: 16px;
+      font-weight: 700;
+   }
+   h2 {
+      color: rgb(0, 0, 0);
+      font-size: 24px;
+      font-weight: 600;
+   }
+   .description {
+      gap: 16px;
+      display: flex;
+      flex-direction: column;
+   }
+   .date {
+      gap: 16px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .amount {
+      gap: 16px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .button {
+      border-radius: 6px;
+      background: rgb(31, 164, 108);
+      padding: 12px;
+      color: white;
+      border: 0;
+      cursor: pointer;
+      &:hover {
+        background: rgb(27, 136, 91);
+        transition: all 0.3s ease;
+      }
+   }
+}
+
+
+@mixin categories {
+   cursor: pointer;
+   padding: 8px 20px;
+   border-radius: 30px;
+   background: rgb(244, 245, 246);
+   word-break: break-word;
+   img {
+      margin-right: 10px;
+      background: transparent;
+   }
+}
+
+.category {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+   gap: 16px;
+
+   ul {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+      li {
+         color: rgb(0, 0, 0);
+         font-size: 12px;
+         font-weight: 400;
+         line-height: 15px;
+         letter-spacing: 0%;
+         text-align: center;
+         &:hover {
+            background: rgb(226, 226, 226);
+            color: rgb(0, 0, 0);
+            transition: all 0.3s ease;
+         }
+      }
+   }
+   .selectedCategory {
+      @include categories;
+   }
+}
+
+.active {
+   @include categories;
+   background: rgb(226, 226, 226);
+   color: rgb(0, 0, 0);
+}

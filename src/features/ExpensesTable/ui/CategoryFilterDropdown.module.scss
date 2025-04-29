@@ -1,0 +1,26 @@
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 8px 0;
+ z-index: 100;
+    ul {
+       li {
+          padding: 10px 16px;
+          cursor: pointer;
+ 
+          &:hover {
+             background-color: #f0f0f0;
+          }
+ 
+          &.active {
+             background-color: #e0e0e0;
+             font-weight: 600;
+          }
+       }
+    }
+ }
