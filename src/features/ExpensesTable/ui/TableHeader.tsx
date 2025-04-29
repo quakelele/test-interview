@@ -53,7 +53,7 @@ export const TableHeader = ({
             <button
                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                style={{ cursor: 'pointer' }}>
-               Фильтровать по категории <b>{selectedCategory || 'Все'}</b> ▼
+               Фильтровать по категории: <b>{selectedCategory || 'Все'}</b> 
             </button>
             {isDropdownOpen && (
                <CategoryFilterDropdown
@@ -64,7 +64,7 @@ export const TableHeader = ({
                />
             )}
          </div>
-         <button onClick={handleSort} style={{ cursor: 'pointer' }}>
+         <button onClick={handleSort} >
             Сортировать по <b>дате</b> {sortOrder === 'asc' ? '▲' : '▼'}
          </button>
       </div>
