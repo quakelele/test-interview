@@ -1,40 +1,46 @@
+// src/features/ExpensesTable/model/useExpenses.ts
+import { useQuery, UseQueryResult } from '@tanstack/react-query'
+import { getExpenses } from 'entities/Expense/api'
+import { Expense } from 'entities/Expense/types'
+import { useState, useMemo } from 'react'
+import { categories as allCategories } from 'shared/utils/categories'
+import { filterExpensesByCategory, sortExpensesByDate } from 'shared/lib'
 
-import { useQuery } from '@tanstack/react-query';
-import { getExpenses } from 'entities/Expense/api';
-import { Expense } from 'entities/Expense/types';
-import { useState } from 'react';
-import { categories } from 'shared/utils/categories';
+const EXPENSES_QUERY_KEY = ['expenses']
 
-export const useExpenses = () => {
-    const [selectedCategory, setSelectedCategory] = useState<string | null>(null); 
-    const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc'); 
+type UseExpensesResult = {
+   data: Expense[]
+   selectedCategory: string | null
+   setSelectedCategory: (category: string | null) => void
+   sortOrder: 'asc' | 'desc'
+   setSortOrder: (order: 'asc' | 'desc') => void
+   categories: string[]
+} & Omit<UseQueryResult<Expense[], unknown>, 'data'>
 
-    const { data, ...rest } = useQuery<Expense[]>({
-        queryKey: ['expenses'],
-        queryFn: getExpenses,
-    });
+export const useExpenses = (): UseExpensesResult => {
+   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc')
 
+   const query = useQuery<Expense[], unknown>({
+      queryKey: EXPENSES_QUERY_KEY,
+      queryFn: getExpenses,
+   })
 
-    const filteredData = selectedCategory
-        ? data?.filter((expense) => expense.category === selectedCategory)
-        : data;
+   const data = useMemo(() => {
+      if (!query.data) return []
+      const filtered = filterExpensesByCategory(query.data, selectedCategory)
+      return sortExpensesByDate(filtered, sortOrder)
+   }, [query.data, selectedCategory, sortOrder])
 
+   const { data: _omitData, ...queryWithoutData } = query 
 
-    const sortedData = filteredData
-        ? [...filteredData].sort((a, b) => {
-              const dateA = new Date(a.date).getTime();
-              const dateB = new Date(b.date).getTime();
-              return sortOrder === 'asc' ? dateA - dateB : dateB - dateA; 
-          })
-        : filteredData;
-
-    return {
-        data: sortedData,
-        selectedCategory,
-        setSelectedCategory,
-        categories: categories.map((cat) => cat.category),
-        sortOrder,
-        setSortOrder,
-        ...rest,
-    };
-};
+   return {
+      data,
+      selectedCategory,
+      setSelectedCategory,
+      sortOrder,
+      setSortOrder,
+      categories: allCategories.map(c => c.category),
+      ...queryWithoutData, 
+   }
+}

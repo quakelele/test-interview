@@ -139,4 +139,37 @@
    }
 }
 
-
+.editBlock {
+   position: absolute;
+   display: flex;
+   flex-direction: row;
+   gap: 5px;
+   left: 0;
+   top: 15%;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   width: 280px;
+   height: 30px;
+   align-items: center;
+   input {
+      border: 0.5px solid rgb(153, 153, 153);
+      border-radius: 6px;
+      color: rgb(153, 153, 153);
+      box-sizing: border-box;
+      width: 90px;
+      height: 30px;
+      font-size: 12px;
+      padding: 3px;
+   }
+   button {
+      border-radius: 5px;
+      background: rgb(31, 164, 108);
+      padding: 3px;
+      color: white;
+      border: 0;
+      cursor: pointer;
+      &:hover {
+         background: rgb(27, 136, 91);
+         transition: all 0.3s ease;
+      }
+   }
+}

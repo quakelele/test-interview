@@ -1,3 +1,5 @@
+import { Expense } from "entities/Expense/types";
+
 const BASE_URL = 'http://localhost:3005/';
 
 export const api = {
@@ -5,7 +7,7 @@ export const api = {
         const response = await fetch(`${BASE_URL}${url}`);
         return response.json();
     },
-    post: async (url: string, data: any) => {
+    post: async (url: string, data: Expense) => {
         const response = await fetch(`${BASE_URL}${url}`, {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
@@ -16,7 +18,7 @@ export const api = {
     delete: async (url: string) => {
         await fetch(`${BASE_URL}${url}`, { method: 'DELETE' });
     },
-    put: async (url: string, data: any) => {
+    put: async (url: string, data: Expense) => {
         const response = await fetch(`${BASE_URL}${url}`, {
             method: 'PUT',
             headers: { 'Content-type': 'application/json' },
@@ -24,4 +26,12 @@ export const api = {
         });
         return response.json();
     },
+    patch: async (url: string, data: Expense) => {
+        const response = await fetch(`${BASE_URL}${url}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        return response.json();
+      },
 };
