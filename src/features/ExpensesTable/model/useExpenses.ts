@@ -1,4 +1,4 @@
-// src/features/ExpensesTable/model/useExpenses.ts
+
 import { useQuery, UseQueryResult } from '@tanstack/react-query'
 import { getExpenses } from 'entities/Expense/api'
 import { Expense } from 'entities/Expense/types'
