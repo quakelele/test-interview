@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { postExpense } from 'entities/Expense/api';
+import { Expense } from 'entities/Expense/types';
 
 
 export const usePostExpense = () => {
@@ -7,7 +8,7 @@ export const usePostExpense = () => {
     return useMutation({
         mutationFn: postExpense,
         onSuccess: (newExpense) =>
-            queryClient.setQueryData(['expenses'], (oldExpenses: any) => [
+            queryClient.setQueryData(['expenses'], (oldExpenses: Expense[]) => [
                 newExpense,
                 ...oldExpenses,
             ]),

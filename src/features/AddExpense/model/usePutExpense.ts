@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { putExpense } from 'entities/Expense/api'
+import { Expense } from 'entities/Expense/types'
 
 export const usePutExpense = () => {
    const queryClient = useQueryClient()
@@ -9,9 +10,9 @@ export const usePutExpense = () => {
     //   onSuccess: () => queryClient.invalidateQueries({ queryKey: ['expenses'] }), // с рефетчем на сервак
 
     onSuccess: (updatedExpense) => {
-        queryClient.setQueryData(['expenses'], (oldExpenses: any) => {
+        queryClient.setQueryData(['expenses'], (oldExpenses: Expense[]) => {
           if (!oldExpenses) return [];
-          return oldExpenses.map((exp: any) =>
+          return oldExpenses.map((exp) =>
             exp.id === updatedExpense.id ? updatedExpense : exp
           );
         });
