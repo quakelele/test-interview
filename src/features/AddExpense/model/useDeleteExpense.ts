@@ -4,13 +4,24 @@ import { Expense } from 'entities/Expense/types'
 
 export const useDeleteExpense = () => {
    const queryClient = useQueryClient()
+
    return useMutation({
       mutationFn: deleteExpense,
-      onSuccess: deletedId =>
-         queryClient.setQueryData(['expenses'], (oldExpenses: Expense[]) =>
-            oldExpenses
-               ? oldExpenses.filter((todo) => todo.id !== deletedId)
-               : []
-         ),
+      // onSuccess: () => {
+      //    queryClient.invalidateQueries({ queryKey: ['expenses'], exact: false })
+      // },  // с рефетчем
+
+      onSuccess: (deletedId) => {
+         queryClient.setQueriesData(
+           { queryKey: ['expenses'], exact: false },
+           (oldExpenses: Expense[] | undefined) => {
+             if (!oldExpenses) return []
+             return oldExpenses.filter((expense) => expense.id !== deletedId)
+           }
+         )
+       } // без рефетча
+       
+
    })
 }
+

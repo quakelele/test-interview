@@ -1,4 +1,4 @@
-import styles from './CategoryFilterDropdown.module.scss'
+import styles from '../styles/CategoryFilterDropdown.module.scss'
 import { AnimatePresence, motion } from 'motion/react'
 type Props = {
    categories: string[]

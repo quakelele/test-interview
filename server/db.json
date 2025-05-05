@@ -1,13 +1,6 @@
 {
   "expenses": [
     {
-      "description": "Аптека Вита",
-      "category": "Другое",
-      "date": "2024-07-03",
-      "amount": 1200,
-      "id": "6169"
-    },
-    {
       "description": "Кофейня №1",
       "category": "Еда",
       "date": "2024-07-02",
@@ -15,60 +8,158 @@
       "id": "93cf"
     },
     {
-      "description": "Бильярд",
-      "category": "Развлечения",
-      "date": "2024-06-29",
-      "amount": 600,
-      "id": "6f4a"
-    },
-    {
-      "description": "Перекресток",
-      "category": "Еда",
-      "date": "2024-06-29",
-      "amount": 2360,
-      "id": "9ffa"
-    },
-    {
-      "description": "Летуль",
-      "category": "Другое",
-      "date": "2024-06-29",
-      "amount": 4300,
-      "id": "a2a2"
-    },
-    {
-      "description": "Деливери",
-      "category": "Еда",
-      "date": "2024-06-28",
-      "amount": 2320,
-      "id": "d957"
-    },
-    {
       "id": "735a",
-      "description": "3131",
+      "description": "Кофе в Starbucks",
       "category": "Еда",
       "date": "2025-04-05",
-      "amount": "3131"
+      "amount": 3131
     },
     {
-      "id": "ad59",
-      "description": "555555",
+      "id": "b26d",
+      "description": "Такси в аэропорт",
+      "category": "Транспорт",
+      "date": "2025-04-01",
+      "amount": 800
+    },
+    {
+      "id": "df19",
+      "description": "Аренда квартиры",
       "category": "Жильё",
-      "date": "2025-04-06",
-      "amount": "55121"
+      "date": "2025-03-25",
+      "amount": 20000
     },
     {
-      "id": "120e",
-      "description": "667",
-      "category": "Еда",
-      "date": "2025-04-05",
-      "amount": "123"
+      "id": "7a1b",
+      "description": "Билеты в кино",
+      "category": "Развлечения",
+      "date": "2025-03-20",
+      "amount": 1200
     },
     {
-      "id": "004c",
-      "description": "Еда",
+      "id": "81b9",
+      "description": "Онлайн-курсы по React",
+      "category": "Образование",
+      "date": "2025-03-10",
+      "amount": 5000
+    },
+    {
+      "id": "c93a",
+      "description": "Шоппинг в центре",
+      "category": "Другое",
+      "date": "2025-04-02",
+      "amount": 3000
+    },
+    {
+      "id": "e56a",
+      "description": "Покупка нового айфона",
+      "category": "Другое",
+      "date": "2025-03-12",
+      "amount": 50000
+    },
+    {
+      "id": "4f67",
+      "description": "Проезд на метро",
+      "category": "Транспорт",
+      "date": "2025-03-30",
+      "amount": 200
+    },
+    {
+      "id": "f72d",
+      "description": "Курсы английского языка",
+      "category": "Образование",
+      "date": "2025-03-08",
+      "amount": 3000
+    },
+    {
+      "id": "f6b9",
+      "description": "Завтрак в кафе",
       "category": "Еда",
-      "date": "2025-04-29",
-      "amount": "989255"
+      "date": "2025-03-14",
+      "amount": 700
+    },
+    {
+      "id": "45db",
+      "description": "Подписка на Netflix",
+      "category": "Развлечения",
+      "date": "2025-03-02",
+      "amount": 450
+    },
+    {
+      "id": "293a",
+      "description": "Ремонт кухни",
+      "category": "Жильё",
+      "date": "2025-03-25",
+      "amount": 15000
+    },
+    {
+      "id": "d345",
+      "description": "ЖД билеты на поезде",
+      "category": "Транспорт",
+      "date": "2025-03-17",
+      "amount": 1500
+    },
+    {
+      "id": "e984",
+      "description": "Ужин с друзьями",
+      "category": "Еда",
+      "date": "2025-03-27",
+      "amount": 2500
+    },
+    {
+      "id": "ab78",
+      "description": "Летний лагерь для детей",
+      "category": "Образование",
+      "date": "2025-03-05",
+      "amount": 10000
+    },
+    {
+      "id": "b3e1",
+      "description": "Концерт группы",
+      "category": "Развлечения",
+      "date": "2025-02-22",
+      "amount": 2200
+    },
+    {
+      "id": "2c91",
+      "description": "Покраска стен в квартире",
+      "category": "Жильё",
+      "date": "2025-03-19",
+      "amount": 5000
+    },
+    {
+      "id": "8f45",
+      "description": "Автобусный тур по городам",
+      "category": "Транспорт",
+      "date": "2025-02-25",
+      "amount": 3000
+    },
+    {
+      "id": "d0a8",
+      "description": "Спортивные занятия",
+      "category": "Другое",
+      "date": "2025-03-29",
+      "amount": 1200
+    },
+    {
+      "id": "32d8",
+      "description": "Билеты в театр",
+      "category": "Развлечения",
+      "date": "2025-03-12",
+      "amount": 1800
+    },
+    {
+      "id": "abe6",
+      "description": "Ремонт машины",
+      "category": "Транспорт",
+      "date": "2025-03-18",
+      "amount": 15000
+    },
+    {
+      "description": "Hasan",
+      "category": "Другое",
+      "date": "2025-05-05",
+      "amount": "480",
+      "id": "j_geAft"
     }
   ]
 }

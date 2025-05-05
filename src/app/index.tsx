@@ -1,5 +1,5 @@
 import { MainPage } from 'pages/MainPage'
-import styles from './styles.module.scss'
+import styles from './styles/styles.module.scss'
 
 export const App = () => {
    return (

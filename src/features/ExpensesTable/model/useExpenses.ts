@@ -1,12 +1,8 @@
-
 import { useQuery, UseQueryResult } from '@tanstack/react-query'
 import { getExpenses } from 'entities/Expense/api'
 import { Expense } from 'entities/Expense/types'
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import { categories as allCategories } from 'shared/utils/categories'
-import { filterExpensesByCategory, sortExpensesByDate } from 'shared/lib'
-
-const EXPENSES_QUERY_KEY = ['expenses']
 
 type UseExpensesResult = {
    data: Expense[]
@@ -22,25 +18,21 @@ export const useExpenses = (): UseExpensesResult => {
    const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc')
 
    const query = useQuery<Expense[], unknown>({
-      queryKey: EXPENSES_QUERY_KEY,
-      queryFn: getExpenses,
+      queryKey: ['expenses', selectedCategory, sortOrder],
+      queryFn: () => getExpenses(selectedCategory, sortOrder),
+      staleTime: 10000, 
+      
    })
 
-   const data = useMemo(() => {
-      if (!query.data) return []
-      const filtered = filterExpensesByCategory(query.data, selectedCategory)
-      return sortExpensesByDate(filtered, sortOrder)
-   }, [query.data, selectedCategory, sortOrder])
-
-   const { data: _omitData, ...queryWithoutData } = query 
+   const { data: _omitData, ...queryWithoutData } = query
 
    return {
-      data,
+      data: query.data || [],
       selectedCategory,
       setSelectedCategory,
       sortOrder,
       setSortOrder,
       categories: allCategories.map(c => c.category),
-      ...queryWithoutData, 
+      ...queryWithoutData,
    }
 }

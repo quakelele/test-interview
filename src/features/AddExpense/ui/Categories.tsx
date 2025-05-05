@@ -1,6 +1,6 @@
 
 import { categories } from 'shared/utils/categories';
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss'
 
 type Props = {
     setSelectedCategory: (arg: string) => void;

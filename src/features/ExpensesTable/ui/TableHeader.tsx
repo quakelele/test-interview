@@ -1,7 +1,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { CategoryFilterDropdown } from './CategoryFilterDropdown'
-import styles from './styles.module.scss'
+import styles from '../styles/styles.module.scss'
 
 type Props = {
    selectedCategory: string | null

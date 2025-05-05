@@ -4,9 +4,8 @@ import { Expense } from 'entities/Expense/types'
 import edit from 'shared/assets/edit-2.png'
 import remove from 'shared/assets/bag-2.png'
 import { useDeleteExpense } from 'features/AddExpense/model/useDeleteExpense'
-import { usePutExpense } from 'features/AddExpense/model/usePutExpense'
 import { useState } from 'react'
-import style from './styles.module.scss'
+import style from '../styles/styles.module.scss'
 import { usePatchExpense } from 'features/AddExpense/model/usePatchExpense'
 
 type Props = {

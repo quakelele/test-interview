@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Categories } from './Categories'
-import { usePostExpense } from '../model/usePostExpense'
-import styles from './styles.module.scss'
+import { Categories } from './ui/Categories'
+import { usePostExpense } from './model/usePostExpense'
+import styles from './styles/styles.module.scss'
 import { Expense } from 'entities/Expense/types'
 
 export const AddExpense = () => {
