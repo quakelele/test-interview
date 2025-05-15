@@ -1,3 +1,8 @@
+@mixin buttonBlock {
+   opacity: 0.6;
+   width: 15px;
+   cursor: pointer;
+}
 .filterWrapper {
    position: relative;
    b {
@@ -143,22 +148,35 @@
    position: absolute;
    display: flex;
    flex-direction: row;
-   gap: 5px;
+   justify-content: space-between;
+   gap: 12px;
    left: 0;
    top: 15%;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-   width: 280px;
-   height: 30px;
+
    align-items: center;
+   .buttonBlock {
+      display: flex;
+      gap: 5px;
+      .cancelOutline {
+         @include buttonBlock;
+      }
+
+      .saveOutline {
+         @include buttonBlock;
+      }
+   }
    input {
-      border: 0.5px solid rgb(153, 153, 153);
+      border: none;
       border-radius: 6px;
       color: rgb(153, 153, 153);
       box-sizing: border-box;
-      width: 90px;
       height: 30px;
       font-size: 12px;
       padding: 3px;
+      padding-left: 15px;
+      &:focus {
+         outline: none;
+      }
    }
    button {
       border-radius: 5px;

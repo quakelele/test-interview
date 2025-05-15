@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { Categories } from './ui/Categories'
 import { usePostExpense } from './model/usePostExpense'
-import styles from './styles/styles.module.scss'
 import { Expense } from 'entities/Expense/types'
+
+import styles from './styles/styles.module.scss'
 
 export const AddExpense = () => {
    const [selectedCategory, setSelectedCategory] = useState('')
    const { mutate: addExpense } = usePostExpense()
+
+
 
    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault()
@@ -16,9 +19,8 @@ export const AddExpense = () => {
       ;(e.target as HTMLFormElement).reset()
       setSelectedCategory('')
    }
-
    return (
-      <form onSubmit={onSubmit} className={styles.wrapper}>
+      <form  onSubmit={onSubmit} className={styles.wrapper}>
          <h2>Новый расход</h2>
          <div className={styles.description}>
             <h3>Описание</h3>

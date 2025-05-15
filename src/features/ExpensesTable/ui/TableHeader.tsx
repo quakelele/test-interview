@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from 'react'
 import { CategoryFilterDropdown } from './CategoryFilterDropdown'
 import styles from '../styles/styles.module.scss'
@@ -21,7 +20,6 @@ export const TableHeader = ({
    const [isDropdownOpen, setIsDropdownOpen] = useState(false)
    const filterRef = useRef<HTMLDivElement>(null)
 
-
    useEffect(() => {
       const handleClickOutside = (event: MouseEvent) => {
          if (
@@ -41,7 +39,6 @@ export const TableHeader = ({
       }
    }, [isDropdownOpen])
 
-
    const handleSort = () => {
       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
    }
@@ -53,7 +50,7 @@ export const TableHeader = ({
             <button
                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                style={{ cursor: 'pointer' }}>
-               Фильтровать по категории: <b>{selectedCategory || 'Все'}</b> 
+               Фильтровать по категории: <b>{selectedCategory || 'Все'}</b>
             </button>
             {isDropdownOpen && (
                <CategoryFilterDropdown
@@ -64,7 +61,7 @@ export const TableHeader = ({
                />
             )}
          </div>
-         <button onClick={handleSort} >
+         <button onClick={handleSort}>
             Сортировать по <b>дате</b> {sortOrder === 'asc' ? '▲' : '▼'}
          </button>
       </div>

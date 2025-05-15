@@ -1,13 +1,6 @@
 {
   "expenses": [
     {
-      "description": "Кофейня №1",
-      "category": "Еда",
-      "date": "2024-07-02",
-      "amount": 400,
-      "id": "93cf"
-    },
-    {
       "id": "735a",
       "description": "Кофе в Starbucks",
       "category": "Еда",
@@ -20,13 +13,6 @@
       "category": "Транспорт",
       "date": "2025-04-01",
       "amount": 800
-    },
-    {
-      "id": "df19",
-      "description": "Аренда квартиры",
-      "category": "Жильё",
-      "date": "2025-03-25",
-      "amount": 20000
     },
     {
       "id": "7a1b",
@@ -50,39 +36,11 @@
       "amount": 3000
     },
     {
-      "id": "e56a",
-      "description": "Покупка нового айфона",
-      "category": "Другое",
-      "date": "2025-03-12",
-      "amount": 50000
-    },
-    {
       "id": "4f67",
       "description": "Проезд на метро",
       "category": "Транспорт",
       "date": "2025-03-30",
       "amount": 200
-    },
-    {
-      "id": "f72d",
-      "description": "Курсы английского языка",
-      "category": "Образование",
-      "date": "2025-03-08",
-      "amount": 3000
-    },
-    {
-      "id": "f6b9",
-      "description": "Завтрак в кафе",
-      "category": "Еда",
-      "date": "2025-03-14",
-      "amount": 700
-    },
-    {
-      "id": "45db",
-      "description": "Подписка на Netflix",
-      "category": "Развлечения",
-      "date": "2025-03-02",
-      "amount": 450
     },
     {
       "id": "293a",
@@ -92,13 +50,6 @@
       "amount": 15000
     },
     {
-      "id": "d345",
-      "description": "ЖД билеты на поезде",
-      "category": "Транспорт",
-      "date": "2025-03-17",
-      "amount": 1500
-    },
-    {
       "id": "e984",
       "description": "Ужин с друзьями",
       "category": "Еда",
@@ -106,32 +57,11 @@
       "amount": 2500
     },
     {
-      "id": "ab78",
-      "description": "Летний лагерь для детей",
-      "category": "Образование",
-      "date": "2025-03-05",
-      "amount": 10000
-    },
-    {
-      "id": "b3e1",
-      "description": "Концерт группы",
-      "category": "Развлечения",
-      "date": "2025-02-22",
-      "amount": 2200
-    },
-    {
       "id": "2c91",
       "description": "Покраска стен в квартире",
       "category": "Жильё",
       "date": "2025-03-19",
       "amount": 5000
-    },
-    {
-      "id": "8f45",
-      "description": "Автобусный тур по городам",
-      "category": "Транспорт",
-      "date": "2025-02-25",
-      "amount": 3000
     },
     {
       "id": "d0a8",
@@ -149,17 +79,24 @@
     },
     {
       "id": "abe6",
-      "description": "Ремонт машины",
+      "description": "Ремонт машиныs",
       "category": "Транспорт",
       "date": "2025-03-18",
       "amount": 15000
     },
     {
-      "description": "Hasan",
-      "category": "Другое",
-      "date": "2025-05-05",
-      "amount": "480",
-      "id": "j_geAft"
+      "description": "5555",
+      "category": "Транспорт",
+      "date": "2025-05-15",
+      "amount": "8899",
+      "id": "CtAbTOH"
+    },
+    {
+      "description": "data",
+      "category": "Еда",
+      "date": "2025-05-16",
+      "amount": "45555",
+      "id": "iNhyYXe"
     }
   ]
 }

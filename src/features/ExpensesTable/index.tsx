@@ -2,7 +2,7 @@ import { useExpenses } from './model/useExpenses'
 import { TableHeader } from './ui/TableHeader'
 import { TableRow } from './ui/TableRow'
 import styles from './styles/styles.module.scss'
-
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 export const Table = () => {
    const {
       data,
@@ -12,7 +12,7 @@ export const Table = () => {
       sortOrder,
       setSortOrder,
    } = useExpenses()
-
+   const [parent] = useAutoAnimate()
    return (
       <div className={styles.container}>
          <TableHeader
@@ -33,7 +33,7 @@ export const Table = () => {
                      <th>Действия</th>
                   </tr>
                </thead>
-               <tbody>
+               <tbody ref={parent}>
                   {data?.map(item => (
                      <TableRow key={item.id} item={item} />
                   ))}
